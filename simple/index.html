@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>RJS Simple</title>
+    <script data-main="scripts/main" src="../bower_components/requirejs/require.js"></script>
+    <style>
+        input {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div ng-controller="CalcController as calc">
+        <label for="firstOperand">First operand</label><br>
+        <input id="firstOperand" type="number" ng-model="calc.ctx.firstOperand"><br>
+
+        <label for="secondOperand">Second operand</label><br>
+        <input id="secondOperand" type="number" ng-model="calc.ctx.secondOperand"><br>
+
+        <label for="operator">Operator</label><br>
+        <input id="operator" type="text" ng-model="calc.ctx.operator"><br>
+
+        <button ng-click="calc.exec()">Calculate</button>
+    </div>
+</body>
+
+</html>
